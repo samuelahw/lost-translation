@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { loginUser } from '../api/user'
 import { useState, useEffect } from 'react'
-import { storageSave } from '../utils/storage'
+import { storageRead, storageSave } from '../utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUser } from '../reducers/userReducer'
@@ -25,8 +25,10 @@ export const LoginForm = () => {
     const [apiError, setApiError] = useState(null)
 
     useEffect(() => {
+        console.log(storageRead("translator-user"))
+
         //If user is logged in, user will be navigated to translate page
-        if (user !== undefined || translations.length !== 0) {
+        if (user !== undefined || translations.length !== 0 || storageRead("translator-user") !== null) {
             navigate('translate')
         }
     }, [user, navigate, translations])
