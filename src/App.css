@@ -13,6 +13,10 @@
   }
 }
 
+body {
+  background-color: #BFBFBF;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,7 +36,73 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  background: #554b4c;
+  padding: 5px
+}
+
+.translatePage {
+  text-align: center;
+}
+
+.loginPage {
+  text-align: center
+}
+
+.Navigation {
+  background: #554b4c;
+  justify-content: center;
+}
+
+.Profile {
+  justify-content: center;
+  align-content: center;
+
+}
+
+.profileButtons {
+  text-align: right;
+}
+
+.profileTexts {
+  text-align: center;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #37c7f3;
+}
+
+a:visited {
+  color: #2ddfff;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #006cfa;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #99dcf7;
+}
+
+a:active {
+  background: #b4c5ff;
+  color: #8ca1ff;
 }
